@@ -1,0 +1,34 @@
+<ion-view view-title="información promociones proveedor " {{proveedor}}>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-click="showDetalle($)" ng-repeat="$ in promociones">
+        <table style="float: left; position: relative;">
+          <tr>
+            <td colspan="3">
+              <font style="font-weight: bold; font-size: 15px;">{{$.idPromocion}} - {{$.nombre}} </font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font style="font-weight: normal; font-size: 9px; color: red">
+                <b>"Click para detalle"</b></font>
+            </td>
+          </tr>
+          <!--
+          <tr>
+            <td>
+              <font style="font-weight: normal; font-size: 12px; color: red">
+                    <b>Valor: {{$.valor | currency:"$":0}}</b>
+              </font>
+            </td>
+            <td>
+              <font style="font-weight: normal; font-size: 12px; padding-left: 15px; color: red">
+                    <b>Descuento: {{$.descuento | currency:"$":0}}</b></font>
+            </td>
+          </tr>
+          -->
+        </table>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

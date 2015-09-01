@@ -1,0 +1,31 @@
+<ion-view view-title="Registrar pago">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input"><font class="col col-50">Valor venta*</font>
+                <input type="text" id="idVenta" ng-disabled="true" ng-model="historialCuenta.id" currency />
+            </label>
+            <label class="item item-input"><font class="col col-50">Cliente*</font>
+                <input type="text" id="idCliente" ng-disabled="true" ng-model="historialCuenta.descCliente" currency />
+            </label>
+            <label class="item item-input"><font class="col col-50">Cuotas a pagar*</font>
+                <input type="number" id="cuotas" ng-model="historialCuenta.cuotas" ng-blur="cambiarNumeroCuotas()" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Valor pago*</font>
+                <input type="number" id="textValorPago" placeholder="Valor de la cuota" ng-model="historialCuenta.valorPago" currency />
+            </label>
+            <label class="item item-input"><font class="col col-50">Saldo*</font>
+                <input type="number" id="textSaldo" ng-disabled="true" ng-model="historialCuenta.valorDeuda" currency />
+            </label>
+        </div>
+    </ion-content>
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" ng-click="guardarInformacion()">
+            <i class="icon ion-checkmark-circled"></i>
+            <font style="font-size: 15px; color: black;">Registrar</font>
+        </a>
+        <a class="tab-item" ng-click="cancelar()">
+            <i class="icon ion-close-circled"></i>
+            <font style="font-size: 15px; color: black;">Cancelar</font>
+        </a>
+    </div>
+</ion-view>

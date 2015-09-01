@@ -7,3 +7,4 @@ logfile.txt
 projectFilesBackup/.idea
 *.log
 
+/nbproject/private/

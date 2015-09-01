@@ -1,0 +1,80 @@
+<ion-view view-title="Información cliente">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input"><font class="col col-50">Idetificación*</font>
+                <input type="number" id="textIdentificacion" ng-disabled="disableTextIdentificacion" placeholder="Idetificación" ng-model="cliente.id" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Nombres*</font>
+                <input type="text" id="textNombre" placeholder="Nombres" ng-model="cliente.nombres" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Apellidos*</font>
+                <input type="text" id="textApellido" placeholder="Apellidos" ng-model="cliente.apellidos" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Alias*</font>
+                <input type="text" id="textAlias" placeholder="Alias" ng-model="cliente.alias" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Dirección*</font>
+                <input type="text" id="textDireccion" placeholder="Dirección" ng-model="cliente.direccion" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Barrio*</font>
+                <input type="text" id="textBarrio" placeholder="Barrio" ng-model="cliente.barrio" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Ciudad*</font>
+                <input type="text" id="textCiudad" placeholder="Ciudad" ng-model="cliente.ciudad" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Teléfono*</font>
+                <input type="number" id="textTelefono" placeholder="Teléfono" ng-model="cliente.telefono" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Celular*</font>
+                <input type="number" id="textCelular" placeholder="Celular" ng-model="cliente.celular" />
+                <a href="tel:{{cliente.celular}}">
+                    <i class="ion-ios-telephone" style="padding-right: 10px;"></i>
+                </a>
+            </label>
+            <label class="item item-input"><font class="col col-50">Correo*</font>
+                <input type="email" id="textCorreo" placeholder="Correo" ng-model="cliente.correo" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Refencia</font>
+                <input type="text" id="textReferencia" placeholder="Refencia" ng-model="cliente.referencia" />
+            </label>
+
+            <label class="item item-input"><font class="col col-50">Estado</font>
+                <select id="selectEstado" class="col col-50" ng-model="cliente.estado">
+                    <option>Activo</option>
+                    <option >Inactivo</option>
+                </select>
+            </label>
+            <label class="item item-input"><font class="col col-50">Ruta*</font>
+                <select id="selectRuta" class="col col-50" ng-model="cliente.descRuta">
+                    <option>Ruta 001</option>
+                    <option >Ruta 002</option>
+                </select>
+            </label>
+            <label class="item item-input" style="padding-bottom: 70px;"><font class="col col-50">Fecha baja</font>
+                <input type="date" id="textFechaBaja" ng-model="cliente.fechaBaja" />
+            </label>
+        </div>
+        <!--        <div class="navbar-header" align="center">
+                    <table>
+                        <tr align="center">
+                            <td>
+                                <a class="button button-balanced" ui-sref="infoCliente"  >Guardar</a>
+                            </td>
+                            <td style="padding-left: 5px;">
+                                <a class="button button-assertive" ui-sref="infoCliente" ng-click="cancelar()">Cancelar</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>-->
+    </ion-content>
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" ng-click="guardarInformacion()">
+            <i class="icon ion-checkmark-circled"></i>
+            <font style="font-size: 15px; color: black;">Guardar</font>
+        </a>
+        <a class="tab-item" ng-click="cancelar()">
+            <i class="icon ion-close-circled"></i>
+            <font style="font-size: 15px; color: black;">Cancelar</font>
+        </a>
+    </div>
+</ion-view>

@@ -1,0 +1,56 @@
+<ion-view view-title="Registrar venta">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input"><font class="col col-50">País*</font>
+                <select id="selectRuta" class="col col-50" ng-model="venta.descPais">
+                    <option>Colombia</option>
+                    <option >Brasil</option>
+                </select>
+            </label>
+            <div>
+                <label class="item item-input"><font class="col col-50">Cliente*</font>
+                    <select id="selectRuta" class="col col-40" ng-model="venta.descCliente">
+                        <option>Wilfer 001</option>
+                        <option >IAS 001</option>
+                    </select>
+                </label>
+            </div>
+            <label class="item item-input"><font class="col col-50">Periodo de pago*</font>
+                <select id="selectPeriodoPago" class="col col-50" ng-model="venta.periodoPago">
+                    <option>Semanal</option>
+                    <option >Quincenal</option>
+                    <option >Mensual</option>
+                </select>
+            </label>
+            <label class="item item-input"><font class="col col-50">Valor venta*</font>
+                <input type="number" id="textValorVenta" ng-blur="operacionValorFinal()" placeholder="Valor neto de la venta" ng-model="venta.valor" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Interes*</font>
+                <input type="number" id="textInteres" ng-blur="operacionValorFinal()" placeholder="Interes de la venta" ng-model="venta.interes" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Valor final*</font>
+                <input type="number" id="textValorTotalVenta" ng-disabled="true" placeholder="Valor total venta" ng-model="venta.valorFinal" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Número cuotas*</font>
+                <input type="number" id="textValorTotalVenta" ng-blur="valorCuota()" placeholder="Número cuotas" ng-model="venta.numeroCoutas" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Valor cuota*</font>
+                <input type="number" id="textValorTotalVenta" ng-disabled="true" placeholder="Valor cuota" ng-model="venta.valorCouta" />
+            </label>
+        </div>
+    </ion-content>
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" ng-click="crearNuevoCliente()">
+            <i class="icon ion-plus-circled"></i>
+            <font style="font-size: 15px; color: black;">Crear cliente</font>
+        </a>
+        <a class="tab-item" ng-click="guardarInformacion()">
+            <i class="icon ion-checkmark-circled"></i>
+            <font style="font-size: 15px; color: black;">Registrar</font>
+        </a>
+        <a class="tab-item" ng-click="cancelar()">
+            <i class="icon ion-close-circled"></i>
+            <font style="font-size: 15px; color: black;">Cancelar</font>
+        </a>
+    </div>
+</ion-view>

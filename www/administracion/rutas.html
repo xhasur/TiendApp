@@ -1,0 +1,15 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Rutas</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeRutas()">Cerrar</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+        <ion-item ng-repeat="ruta in rutas" href="#/app/playlists" ng-click="seleccionRuta(ruta)">
+        {{ruta.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,33 @@
+<ion-view view-title="Gastos/Ingresos/Retiros">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input"><font class="col col-50">Tipo*</font>
+                <select id="selectTipoMov" ng-change="cambiarTipoMovimiento()" class="col col-50" ng-model="movimientosDinero.tipo">
+                    <option ng-repeat="option in dataTipoMov" value="{{option.id}}">{{option.nombre}}</option>
+                </select>
+            </label>
+            <label class="item item-input"><font class="col col-50">Descripción*</font>
+                <select id="selectDescripcion" class="col col-50" ng-model="movimientosDinero.descripcion">
+                    <option>Gasolina</option>
+                    <option >Almuerzo</option>
+                </select>
+            </label>
+            <label class="item item-input"><font class="col col-50">Comentarios*</font>
+                <input type="text" id="textComentarios" placeholder="Comentarios" ng-model="movimientosDinero.comentarios" />
+            </label>
+            <label class="item item-input"><font class="col col-50">Valor*</font>
+                <input type="number" id="textValorMov" placeholder="Valor del movimiento" ng-model="movimientosDinero.valor" />
+            </label>
+        </div>
+    </ion-content>
+    <div class="tabs tabs-icon-left">
+        <a class="tab-item" ng-click="guardarInformacion()">
+            <i class="icon ion-checkmark-circled"></i>
+            <font style="font-size: 15px; color: black;">Guardar</font>
+        </a>
+        <a class="tab-item" ng-click="cancelar()">
+            <i class="icon ion-close-circled"></i>
+            <font style="font-size: 15px; color: black;">Cancelar</font>
+        </a>
+    </div>
+</ion-view>
