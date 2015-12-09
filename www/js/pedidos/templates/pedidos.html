@@ -2,17 +2,17 @@
   <ion-content>
     <div class="list">
       <label class="item item-input"><font class="col col-50">Proveedor*</font>
-        <select id="selectTipoProv" ng-change="cambiarTipoMovimiento()" class="col col-50" ng-model="pedido.proveedor">
-          <option ng-repeat="option in dataTipoMov" value="{{option.id}}">{{option.nombre}}</option>
+        <select id="selectTiProv" ng-change="cambioProveedor($)" class="col col-50" ng-model="pedido.proveedor">
+          <option ng-repeat="$ in pedido.proveedores" value="{{$.cdproveedor}}">{{$.dsproveedor}}</option>
         </select>
       </label>
       <label class="item item-input"><font class="col col-50">Tipo producto*</font>
-        <select id="selectTipoProd" ng-change="cambiarTipoMovimiento()" class="col col-50" ng-model="pedido.tipoProducto">
-          <option ng-repeat="option in dataTipoMov" value="{{option.id}}">{{option.nombre}}</option>
+        <select id="selectTipoProd" ng-change="cambiarTipoPro()" class="col col-50" ng-model="pedido.tipoProducto">
+          <option ng-repeat="$ in dataTipoMov" value="{{$.id}}">{{$.nombre}}</option>
         </select>
       </label>
       <label class="item item-input"><font class="col col-50">producto*</font>
-        <select id="selectTipoProd" ng-change="cambiarTipoMovimiento()" class="col col-50" ng-model="pedido.producto">
+        <select id="selectProd" ng-change="cambiarTipoMovimiento()" class="col col-50" ng-model="pedido.producto">
           <option ng-repeat="option in dataTipoMov" value="{{option.id}}">{{option.nombre}}</option>
         </select>
       </label>

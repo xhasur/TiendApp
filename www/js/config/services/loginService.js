@@ -4,7 +4,7 @@ angular.module('starter.controllers').service('loginService', function($q) {
       var deferred = $q.defer();
       var promise = deferred.promise;
 
-      if (name == 'an' && pw == 'lo') {
+      if (name == '1' && pw == '1') {
         deferred.resolve('Welcome ' + name + '!');
       } else {
         deferred.reject('Wrong credentials.');

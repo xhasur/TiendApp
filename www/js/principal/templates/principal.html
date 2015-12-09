@@ -1,0 +1,21 @@
+<ion-view view-title="PROMOCIONES">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Promociones</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item ng-repeat="image in allImages">
+          <div align="center" >
+          <img ng-src="{{ image.src }}" ng-click="viewProducto(image.id)" class="image-list-thumb">
+          <h2>{{ image.nombre }}</h2>
+          <h4>{{ image.precio }}</h4>
+          </div>
+          <ion-option-button class="button icon-right ion-chevron-right button-calm"
+                             ng-click="comprarProducto(image)">Comprar</ion-option-button>
+        </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+
+

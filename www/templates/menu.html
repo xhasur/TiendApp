@@ -16,19 +16,36 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
+        <ion-item menu-close ui-sref="app.principal">
+          <i class="ion-loop"></i>
+          Prncipal
+        </ion-item>
+        <ion-item menu-close ui-sref="app.informacionInteres">
+          <i class="ion-ios-people"></i>
+          Informacion interes
+        </ion-item>
+        <ion-item menu-close ui-sref="app.indicadores">
+          <i class="ion-stats-bars"></i>
+          Indicadores de compra
+        </ion-item>
         <ion-item menu-close ui-sref="app.promociones">
+          <i class="ion-cash"></i>
           Promociones
         </ion-item>
         <ion-item menu-close ui-sref="app.ingresoPedidos">
+          <i class="ion-compose"></i>
           Ingresar pedido
         </ion-item>
         <ion-item menu-close ui-sref="app.verPedidos">
+          <i class="ion-search"></i>
         Consultar  pedido
       </ion-item>
         <ion-item menu-close ui-sref="login">
+          <i class="ion-android-hand"></i>
           Salir
         </ion-item>
         <ion-item menu-close ng-click="ionic.Platform.exitApp();">
+          <i class="ion-power"></i>
           Cerrar
         </ion-item>
       </ion-list>

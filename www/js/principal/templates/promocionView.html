@@ -1,0 +1,21 @@
+<ion-view view-title="DETALLE PRODUCTO">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Promociones</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item>Codigo producto: {{producto.id}}</ion-item>
+        <ion-item>Nombre producto: {{promocionesDetalle.nombre}}</ion-item>
+        <ion-item>Valor producto: {{promocionesDetalle.precio}}</ion-item>
+      </ion-list>
+    </ion-content>
+  <div class="tabs tabs-icon-left">
+    <a class="tab-item" ng-click="cancelar()">
+      <i class="icon ion-close-circled"></i>
+      <font style="font-size: 15px; color: black;">Cancelar</font>
+    </a>
+  </div>
+</ion-view>
+
+
+

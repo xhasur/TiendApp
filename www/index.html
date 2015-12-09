@@ -7,7 +7,7 @@
 
   <link href="lib/ionic/css/ionic.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="lib/angular-chart.js/dist/angular-chart.css">
   <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
   <link href="css/ionic.app.css" rel="stylesheet">
   -->
@@ -20,14 +20,28 @@
   <script src="cordova.js"></script>
 
 
+  <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/Chart.js/Chart.js"></script>
+  <script src="lib/angular-chart.js/dist/angular-chart.js"></script>
+
 
   <!-- your app's js -->
   <script src="js/modules/starter.controllers/starter.controllers.js"></script>
   <script src="js/administracion/controllers.js"></script>
   <script src="js/administracion/asociarDispositivoCtrl.js"></script>
 
+
+
+
   <!-- login -->
   <script src="js/login/controller/loginCtrl.js"></script>
+
+  <!-- principal -->
+  <script src="js/principal/controller/principalCtrl.js"></script>
+
+  <!-- indicadores -->
+  <script src="js/indicadores/controller/indicadoresCtrl.js"></script>
+
 
   <!-- promociones -->
   <script src="js/promociones/controller/promocionesCtrl.js"></script>
@@ -38,11 +52,15 @@
 
   <!-- servicios -->
   <script src="js/config/services/loginService.js"></script>
+
   <script src="js/app.js"></script>
+
+  <!--Factoryys-->
+  <script src="js/config/factorys/ResourceFactory.js"></script>
 
 </head>
 
-<body ng-app="starter">
+<body ng-app="starter" class="platform-android platform-cordova platform-webview">
 <ion-nav-view></ion-nav-view>
 </body>
 </html>
